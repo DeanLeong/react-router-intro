@@ -183,7 +183,7 @@ Also, note that we used `component` in this case to display our home component. 
 > 5 minute exercise / 5 minute review
 * Using the above code as a guide, I want you to pseudocode on the board, with your group, what you think the next Link will look like for `/currencies` and the route that would match it.
 <details>
-<summary>Think About</summary>
+<summary>Think About:</summary>
 <br>
 What files should be changed?
 What will the code look like?
