@@ -185,7 +185,7 @@ Also, note that we used `component` in this case to display our home component. 
 <details>
 <summary>Think About:</summary>
 <br>
-What files should be changed?
+What files should be changed?<br>
 What will the code look like?
 <br>
 </details>
