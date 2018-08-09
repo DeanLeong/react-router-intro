@@ -455,6 +455,11 @@ So easy!
 
 ![shia](https://media.giphy.com/media/ujUdrdpX7Ok5W/giphy.gif)
 
+
+## A Time For Reflection
+
+Break up in to groups, I want you to meditate on the things that you have learned this lesson and I want you to primarily think about steps to set up and apply react-router to an existing application, like we just did.
+
 ## Wrapping up (remainder of class)
 
 Here's a rough outline of how you should go about building react apps! Follow these suggestions, or don't, but they wil probably help you a lot if you do them in order. I suggest reading the whole thing before you start so you can have an idea of what the process looks like.
