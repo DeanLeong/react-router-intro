@@ -21,8 +21,9 @@ Don't confuse it with the express router! They do different things, though they 
 ## We Do: [React Bitcoin Prices](https://git.generalassemb.ly/dc-wdi-react-redux/react-bitcoin-prices) Setup (5 min / 0:10)
 
 <details>
-<summary>Let's get set up with the react bitcoin price checker!<summary/>
+<summary>Let's get set up with the react bitcoin price checker!</summary>
 <br>
+
 React Router/Bitcoin price checker
 Description
 This app uses react router and the Coindesk API to get realtime data of bitcoin pricing. Neat, right?
