@@ -24,6 +24,7 @@ Don't confuse it with the express router! They do different things, though they 
 <summary>
 Let's get set up with the react bitcoin price checker!
 <summary/>
+<br>
 
 React Router/Bitcoin price checker
 Description
