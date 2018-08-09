@@ -53,11 +53,16 @@ Also, install the [React developer tools](https://chrome.google.com/webstore/det
 
 Take 10 minutes and read through the code to familiarize yourself with the codebase with a partner or in groups of 3. Prepare to discuss your answers the following questions:
 
+<details>
+<summary>Things To Consider When Looking at the Database</summary>
+<br>
 1. What dependencies is the application currently using? Where can I find information on them?
 2. What is the purpose of `ReactDOM.render()`? What file is this method being called in?
 3. Where are the components of our application located? Why might we want to separate them into their own folders?
 4. Where is state located in our application? Is state being passed down to other components?
 5. Where is our application getting data from? How is it accomplishing this?
+</details>
+
 
 ## We Do: React Router Setup (10 min / 0:40)
 
