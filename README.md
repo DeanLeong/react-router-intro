@@ -20,7 +20,7 @@ Don't confuse it with the express router! They do different things, though they 
 
 ## We Do: [React Bitcoin Prices](https://git.generalassemb.ly/dc-wdi-react-redux/react-bitcoin-prices) Setup (5 min / 0:10)
 
-<details open>
+<details>
 <summary>Let's get set up with the react bitcoin price checker!<summary/>
 <br>
 
