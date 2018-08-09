@@ -25,6 +25,7 @@ Don't confuse it with the express router! They do different things, though they 
 <br>
 
 React Router/Bitcoin price checker
+<br>
 Description
 This app uses react router and the Coindesk API to get realtime data of bitcoin pricing. Neat, right?
 
@@ -36,7 +37,7 @@ npm install
 code .
 npm run start
 ```
-<details>
+</details>
 
 
 
