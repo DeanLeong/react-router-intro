@@ -46,6 +46,15 @@ npm run start
 We will be using [Axios](https://github.com/axios/axios) to query the Coindesk API in this exercise. Take 5 minutes to read and test out (using postman or the browser) the API docs below
 
 [Coindesk API](https://www.coindesk.com/api/)
+<details>
+<summary>
+Coindesk Endpoints: (Make Get Requests To These Endpoints With Postman)</summary>
+
+API Endpoints with BitCoin - Coindesk: <br>
+https://api.coindesk.com/v1/bpi/currentprice.json<br>
+https://api.coindesk.com/v1/bpi/currentprice/AED.json<br>
+https://api.coindesk.com/v1/bpi/historical/close.json<br>
+</details>
 
 Also, install the [React developer tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en) chrome extension if you haven't already. It'll come in very handy for inspecting components.
 
@@ -54,7 +63,7 @@ Also, install the [React developer tools](https://chrome.google.com/webstore/det
 Take 10 minutes and read through the code to familiarize yourself with the codebase with a partner or in groups of 3. Prepare to discuss your answers the following questions:
 
 <details>
-<summary>Things To Consider When Looking at the Database</summary>
+<summary>Things To Consider When Looking at the Database:</summary>
 <br>
 1. What dependencies is the application currently using? Where can I find information on them?<br>
 2. What is the purpose of `ReactDOM.render()`? What file is this method being called in?<br>
@@ -171,9 +180,13 @@ Also, note that we used `component` in this case to display our home component. 
 ## You do: Add a Second Route and Link (10 min / 0:50)
 
 > 5 minute exercise / 5 minute review
-
-* Using the above instructions as a guide, add a new Link to `/currencies` and a route to match it. What component do you think you want to render?
-
+* Using the above code as a guide, I want you to pseudocode on the board, with your group, what you think the next Link will look like for `/currencies` and the route that would match it.
+<details>
+<summary>Think About</summary>
+<br>
+What files should be changed?
+What will the code look like?
+</details>
 
 <details>
   <summary>Solution</summary>
