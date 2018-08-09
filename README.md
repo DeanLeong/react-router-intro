@@ -48,7 +48,7 @@ We will be using [Axios](https://github.com/axios/axios) to query the Coindesk A
 [Coindesk API](https://www.coindesk.com/api/)
 <details>
 <summary>
-Coindesk Endpoints: (Make Get Requests To These Endpoints With Postman)</summary>
+Coindesk Endpoints: (Make GET Requests To These Endpoints With Postman)</summary>
 
 API Endpoints with BitCoin - Coindesk: <br>
 https://api.coindesk.com/v1/bpi/currentprice.json<br>
@@ -111,9 +111,9 @@ Next, in `App.js`, we need to import all of the other components we want to use 
 The three main ones we're going to use today are:
 
 ```jsx
-<Route />
-<Link />
-<Switch />
+<Route /> {*/ => SETUP ROUTES */}
+<Link />  {*/=> ALLOWS US TO LINK TO A ROUTE */}
+<Switch /> {*/ => ALLOWS US TO SWITCH BETWEEN ROUTES AND NESTED ROUTES */}
 ```
 
 Let's go ahead and import just route and link for now, we'll cover switch later.
