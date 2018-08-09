@@ -187,7 +187,9 @@ Also, note that we used `component` in this case to display our home component. 
 <br>
 What files should be changed?
 What will the code look like?
+<br>
 </details>
+<br>
 
 <details>
   <summary>Solution</summary>
