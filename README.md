@@ -36,7 +36,7 @@ cd react-bitcoin-prices
 npm install
 code .
 npm run start
-</details>
+<details>
 
 
 
