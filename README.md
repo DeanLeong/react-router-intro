@@ -458,7 +458,7 @@ So easy!
 
 ## A Time For Reflection
 
-Break up in to groups, I want you to meditate on the things that you have learned this lesson and I want you to primarily think about steps to set up and apply react-router to an existing application, like we just did.
+Break up in to groups (I will count off from 1 - 3), I want you to meditate on the things that you have learned this lesson and I want you to primarily think about steps to set up and apply react-router to an existing application, like we just did. I will provide 7 minutes to think on this and then each group will discuss their thoughts.
 
 ## Wrapping up (remainder of class)
 
