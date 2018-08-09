@@ -113,7 +113,7 @@ The three main ones we're going to use today are:
 ```jsx
 <Route />  => SETUP ROUTES 
 <Link />  => ALLOWS US TO LINK TO A ROUTE 
-<Switch />  => ALLOWS US TO SWITCH BETWEEN ROUTES AND NESTED ROUTES 
+<Switch />  => ALLOWS US TO SWITCH BETWEEN ROUTES, NESTED ROUTES/COMPLEX ROUTES
 ```
 
 Let's go ahead and import just route and link for now, we'll cover switch later.
