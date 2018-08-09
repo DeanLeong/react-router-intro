@@ -18,10 +18,10 @@ We will configure it as the root component in a React application. Then we'll te
 
 Don't confuse it with the express router! They do different things, though they both operate based on paths.
 
-<details open>
-<summary>
 ## We Do: [React Bitcoin Prices](https://git.generalassemb.ly/dc-wdi-react-redux/react-bitcoin-prices) Setup (5 min / 0:10)
 
+<details open>
+<summary>
 Let's get set up with the react bitcoin price checker!
 <summary/>
 
