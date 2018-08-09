@@ -18,9 +18,26 @@ We will configure it as the root component in a React application. Then we'll te
 
 Don't confuse it with the express router! They do different things, though they both operate based on paths.
 
+<details open>
+<summary>
 ## We Do: [React Bitcoin Prices](https://git.generalassemb.ly/dc-wdi-react-redux/react-bitcoin-prices) Setup (5 min / 0:10)
 
 Let's get set up with the react bitcoin price checker!
+<summary/>
+
+React Router/Bitcoin price checker
+Description
+This app uses react router and the Coindesk API to get realtime data of bitcoin pricing. Neat, right?
+
+Installation Instructions
+git clone git@git.generalassemb.ly:dc-wdi-react-redux/react-bitcoin-prices.git
+cd react-bitcoin-prices
+npm install
+code .
+npm run start
+</details>
+
+
 
 ## You Do: Axios & Coindesk API (5 min / 0:15)
 
@@ -295,45 +312,10 @@ this.state = {
 }
 ```
 
-This turns into:
+There are other aspects of props and state that we want to pass to the Price component, if we passed everything we need it would look like this.
 
-```js
-<Price
-  price={this.state.price}
-/>
-```
 
-If we use the react dev tools, we can what props have been passed down from the `routerProps` object.
-
-```js
-let routerProps = {
-  history: { /* stuff in here */ },
-  location: { /* stuff in here */ },
-  match: { /* stuff in here */ }
-}
-```
-
-So if we spread the routerProps object, we'll get something like this:
-
-```js
-<Price
-  history={ /* stuff in here */ }
-  location={ /* stuff in here */ }
-  match={ /* stuff in here */ }
->
-```
-
-Putting it all together, we turn this:
-
-```jsx
-<Price 
-  setPrice={this.setPrice}
-  {...routerProps}
-  {...this.state} 
-/>
-```
-
-Into this:
+Instead of doing this:
 
 ```jsx
 <Price 
@@ -345,7 +327,15 @@ Into this:
 />
 ```
 
-Super cool right?
+We do this, it is just a way of simplifying code and including key-value pairs as a group rather than specifically say them:
+
+```jsx
+<Price 
+  setPrice={this.setPrice}
+  {...routerProps}
+  {...this.state} 
+/>
+```
 
 ![shia](https://media.giphy.com/media/ujUdrdpX7Ok5W/giphy.gif)
 
@@ -361,7 +351,7 @@ Since we're not using switch right now, we'll see something like this:
 
 There are two components stacked on top of each other! The Home and the Currencies component. That's silly.
 
-> Why does this happen?
+> Why does this happen? Because we are not using exact routes or Switch, it sees that this is the root route and everything technically starts from the root. It renders that component on all the pages unless we tell it otherwise
 
 There are two ways to handle this: using the Switch component, or specifying `exact` on routes.
 
