@@ -56,6 +56,7 @@ https://api.coindesk.com/v1/bpi/currentprice/AED.json<br>
 https://api.coindesk.com/v1/bpi/historical/close.json<br>
 </details>
 
+
 Also, install the [React developer tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en) chrome extension if you haven't already. It'll come in very handy for inspecting components.
 
 ## You Do: Examine Current Codebase (15 min / 0:30)
