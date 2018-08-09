@@ -56,11 +56,11 @@ Take 10 minutes and read through the code to familiarize yourself with the codeb
 <details>
 <summary>Things To Consider When Looking at the Database</summary>
 <br>
-1. What dependencies is the application currently using? Where can I find information on them?
-2. What is the purpose of `ReactDOM.render()`? What file is this method being called in?
-3. Where are the components of our application located? Why might we want to separate them into their own folders?
-4. Where is state located in our application? Is state being passed down to other components?
-5. Where is our application getting data from? How is it accomplishing this?
+1. What dependencies is the application currently using? Where can I find information on them?<br>
+2. What is the purpose of `ReactDOM.render()`? What file is this method being called in?<br>
+3. Where are the components of our application located? Why might we want to separate them into their own folders?<br>
+4. Where is state located in our application? Is state being passed down to other components?<br>
+5. Where is our application getting data from? How is it accomplishing this?<br>
 </details>
 
 
