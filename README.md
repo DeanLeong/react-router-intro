@@ -155,6 +155,7 @@ render() {
   What is the 'Link' component for ?</br>
   What is the 'to' in the '  Link to=""  ' for ?</br>
   What is the 'Switch' component for ? </br>
+  If you have a Link component what should you also have ? </br>
   What is the 'Route' component for ? </br></br>
 </details>
 
@@ -188,6 +189,11 @@ render() {
   )
 }
 ```
+
+<details>
+  <summary>Check For Understanding: What happens if we go to '/prices' ?</summary>
+  It will still render the 'Home' component, in order for it to match the route exactly, we need to pass the 'exact' prop.
+</details>
 
 Great! But this doesn't do anything because we're already on the homepage.
 
