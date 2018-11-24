@@ -367,6 +367,8 @@ We also have to pass our URL parameter into `<Price />`. This is where the arrow
 <details>
 <summary>What do these props look like and how can I see them in the Price Component ?</summary>
 
+
+
 ![debugger](images/Screen Shot 2018-11-24 at 11.40.19 AM)
 
 </details>
