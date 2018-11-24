@@ -369,7 +369,7 @@ We also have to pass our URL parameter into `<Price />`. This is where the arrow
 
 
 
-![debugger](images/Screen%20Shot%202018-11-24%20at%2011.40.19%20AM)
+![debugger](images/Screen%20Shot%202018-11-24%20at%2011.40.19%20AM.png)
 
 </details>
 
