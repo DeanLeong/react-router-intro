@@ -394,13 +394,13 @@ Open up [quokka](https://quokkajs.com/) or your favorite interactive javascript 
 Let's start with two objects with a few properties in them.
 
 ```js
-let shed = {
+var shed = {
   color: "red",
   spiders: true,
   contains: ["lawnmower", "dirt", "flashlight"]
 }
 
-let house = {
+var house = {
   doors: 3,
   garage: true
 }
@@ -411,13 +411,13 @@ Using the spread operator we can unpack the values in shed, and place all the va
 Let's rewrite this a bit.
 
 ```js
-let shed = {
+var shed = {
   color: "red",
   spiders: true,
   contains: ["lawnmower", "dirt", "flashlight"]
 }
 
-let house = {
+var house = {
   doors: 3,
   garage: true,
   ...shed
