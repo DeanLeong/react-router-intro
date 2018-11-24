@@ -202,7 +202,7 @@ Also, note that we used `component` in this case to display our home component. 
 ## You do: Add a Second Route and Link (10 min / 0:50)
 
 > 5 minute exercise / 5 minute review
-<<<<<<< HEAD
+
 * Using the above code as a guide, I want you to pseudocode on the board, with your group, what you think the next Link will look like for `/currencies` and the route that would match it.
 <details>
 <summary>Think About:</summary>
@@ -212,10 +212,6 @@ What will the code look like?
 <br>
 </details>
 <br>
-=======
-
-- Using the above instructions as a guide, add a new Link to `/currencies` and a route to match it. What component do you think you want to render?
->>>>>>> 2460f2ea003edd5c9cfc8d4192c4cfe4704e7d20
 
 <details>
   <summary>Solution</summary>
@@ -456,7 +452,6 @@ this.state = {
 
 There are other aspects of props and state that we want to pass to the Price component, if we passed everything we need it would look like this.
 
-<<<<<<< HEAD
 
 Instead of doing this:
 
@@ -468,58 +463,15 @@ Instead of doing this:
   match={}
   price={this.state.price}
 />
-=======
-```js
-<Price price={this.state.price} />
 ```
 
-If we use the react dev tools, we can see what props have been passed down from the `routerProps` object.
-
-```js
-let routerProps = {
-  history: {
-    /* stuff in here */
-  },
-  location: {
-    /* stuff in here */
-  },
-  match: {
-    /* stuff in here */
-  }
-}
-```
-
-So if we spread the routerProps object, we'll get something like this:
-
-```js
-<Price
-  history={ /* stuff in here */ }
-  location={ /* stuff in here */ }
-  match={ /* stuff in here */ }
->
-```
-
-Putting it all together, we turn this:
-
-```jsx
-<Price setPrice={this.setPrice} {...routerProps} {...this.state} />
->>>>>>> 2460f2ea003edd5c9cfc8d4192c4cfe4704e7d20
-```
-
-We do this, it is just a way of simplifying code and including key-value pairs as a group rather than specifically say them:
+Instead we do this, it is just a way of simplifying code and including key-value pairs as a group rather than specifically say them:
 
 ```jsx
 <Price
   setPrice={this.setPrice}
-<<<<<<< HEAD
   {...routerProps}
   {...this.state} 
-=======
-  history={ /* stuff in here */ }
-  location={ /* stuff in here */ }
-  match={ /* stuff in here */ }
-  price={this.state.price}
->>>>>>> 2460f2ea003edd5c9cfc8d4192c4cfe4704e7d20
 />
 ```
 
@@ -562,7 +514,7 @@ Try putting `exact` on the `/` path route component.
 <Route path="/" exact component={Home} />
 ```
 
-> Note: this is equivalent to putting `exact=true`
+> Note: this is equivalent to putting `exact=true`, we need to do this because all of the routes for pricing and currency technically match the route of '/' and that route comes before price or currency. If I were to move the '/' route to the bottom this would work also, without exact.
 
 Beautiful! this is a great solution, unless we have many different routes.
 
