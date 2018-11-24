@@ -389,7 +389,7 @@ Finally, we need to pass in the current component's state. We can also use the s
 
 The `...` syntax looks funny, so let's step aside and show you something that might be more familiar.
 
-Open up [quokka][https://quokkajs.com/] or your favorite interactive javascript environment and follow along.
+Open up [quokka](https://quokkajs.com/) or your favorite interactive javascript environment and follow along.
 
 Let's start with two objects with a few properties in them.
 
