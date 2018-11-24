@@ -12,9 +12,9 @@
 
 Up to this point, our React applications have been limited in size, allowing us to use basic control flow in our components' render methods to determine what gets rendered to our users. However, as our React applications grow in size and scope, we need an easier and more robust way of rendering different components. Additionally, we will want the ability to set information in the url parameters to make it easier for users to identify where they are in the application.
 
-React Router, while not the only, is the most commonly-used routing library for React. It is relatively straightforward to configure and integrates with the component architecture nicely (since it's just a collection of components).
+React Router, while not the only routing framework for react, is the most commonly-used routing library for React. It is relatively straightforward to configure and integrates with the component architecture nicely (since it's just a collection of components).
 
-We will configure it as the root component in a React application. Then we'll tell it to render other components within itself depending on the path in the url. This way we don't have to reload the entire page to swap out some data.
+We will configure it as the root component in our React application. Then we'll tell it to render other components within itself depending on the path in the url. This way we don't have to reload the entire page to swap out some data.
 
 Don't confuse it with the express router! They do different things, though they both operate based on paths.
 
@@ -24,9 +24,11 @@ Don't confuse it with the express router! They do different things, though they 
 <summary>Let's get set up with the react bitcoin price checker!</summary>
 <br>
 
-React Router/Bitcoin price checker
+React Router - Bitcoin price checker
 <br>
-Description
+
+Description:
+
 This app uses react router and the Coindesk API to get realtime data of bitcoin pricing. Neat, right?
 
 Installation Instructions
@@ -148,6 +150,12 @@ render() {
 }
 ```
 
+<details>
+  <summary>Check For Understanding</summary>
+  What is the 'Link' component for ?
+  What is the 'to' in the '<Link to=""></Link>'?
+  What is the 'Route' component for ?
+</details>
 > **Link** - a component for setting the URL and providing navigation between different components in our app without triggering a page refresh. It takes a `to` property, which sets the URL to whatever path is defined within it. Link can also be used inside of any component that is connected to a `Route`.
 
 > **Route** - a component that renders a specified component (using either `render` or `component`) based on the current url (`path`) we're at. `path` should probably match a `<Link to="">` defined somewhere.
