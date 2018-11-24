@@ -269,9 +269,9 @@ It changes the route for us (notice the URL changing) but we don't have any rout
 
 > 5 min exercise, 5 min review
 
-Back in `App.js`, we need to add another `<Route>` component. This time though, we want to include a parameter.
+Back in `App.js`, we need to add another `<Route>` component. This time though, we want to include a parameter. I will break you up in to groups.
 
-Look at the URL that we're on after clicking on a currency. Then look at the Price component. How might you write the `path` prop to make it work?
+With your group, look at the URL that we're on after clicking on a currency. Then look at the Price component. How might you write the `path` prop to make it the route work?
 
 > Hint: This part is just like defining a route in express.
 
