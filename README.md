@@ -307,7 +307,7 @@ We've added a route but not everything will work yet. HOW COME!?
 
 There are a couple things we need to fix.
 
-Firstly, we have to make sure we're using `render` instead of `component` in our route. That's because we're going to be passing some props into our component.
+First, we have to make sure we're using `render` instead of `component` in our route. That's because we're going to be passing some props into our component.
 
 ```jsx
 //...
@@ -336,6 +336,39 @@ We also have to pass our URL parameter into `<Price />`. This is where the arrow
 ```
 
 > The `...` (spread operator) is allowing us to "destructure" the props object being passed by `Router` and apply each of its key/value pairs as props on the `Price` component.
+
+<details>
+<summary>What would this look like with out the spread operator ?</summary>
+
+```
+<Route 
+            path="/price/:id"
+            render={ (routerProps) => {
+           
+                return (
+                  <Price 
+                  setPrice={this.setPrice} 
+                  history={routerProps.history}
+                  location={routerProps.location}
+                  match={routerProps.match}
+                  staticContext={routerProps.staticContext}
+                  />
+                )
+              }
+            }
+
+          />
+```
+
+</br>
+
+</details>
+
+<details>
+<summary>What do these props look like and how can I see them in the Price Component ?</summary>
+![debugger](images/Screen Shot 2018-11-24 at 11.40.19 AM)
+</details>
+
 
 Finally, we need to pass in the current component's state. We can also use the spread operator for that.
 
