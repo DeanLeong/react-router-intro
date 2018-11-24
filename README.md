@@ -154,6 +154,7 @@ render() {
   <summary>Check For Understanding</summary>
   What is the 'Link' component for ?</br>
   What is the 'to' in the '  Link to=""  ' for ?</br>
+  What is the 'Switch' component for ? </br>
   What is the 'Route' component for ? </br></br>
 </details>
 
