@@ -440,7 +440,6 @@ console.log(items)
 // ['banana', 'lawnmower', 'dirt', 'flashlight']
 ```
 
-Now let's apply this to the router!
 
 We know what our state object looks like, so we can use that as an example.
 
@@ -450,10 +449,7 @@ this.state = {
 }
 ```
 
-There are other aspects of props and state that we want to pass to the Price component, if we passed everything we need it would look like this.
-
-
-Instead of doing this:
+Lets say there are other aspects of props and state that we want to pass to the Price component, if we passed everything we need it would look like this.
 
 ```jsx
 <Price 
