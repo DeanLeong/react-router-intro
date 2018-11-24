@@ -620,7 +620,7 @@ So easy!
 
 Break up in to groups (I will count off from 1 - 3), I want you to meditate on the things that you have learned this lesson and I want you to primarily think about steps to set up and apply react-router to an existing application, like we just did. I will provide 7 minutes to think on this and then each group will discuss their thoughts.
 
-## Wrapping up (remainder of class)
+## You Do: Create a Basic React Routing App - Wrapping up (remainder of class)
 
 Here's a rough outline of how you should go about building react apps! Follow these suggestions, or don't, but they wil probably help you a lot if you do them in order. I suggest reading the whole thing before you start so you can have an idea of what the process looks like.
 
