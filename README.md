@@ -4,15 +4,15 @@
 
 ## Learning Objectives
 
-* Use React Router's `BrowserRouter`, `Link`, `Route`, `Redirect`, and `Switch` components to add navigation to a React application
-* Review the React component lifecycle and use component methods to integrate with API calls
-* Talk about SPAs
+- Use React Router's `BrowserRouter`, `Link`, `Route`, `Redirect`, and `Switch` components to add navigation to a React application
+- Review the React component lifecycle and use component methods to integrate with API calls
+- Talk about SPAs
 
 ## Framing (5 min / 0:05)
 
 Up to this point, our React applications have been limited in size, allowing us to use basic control flow in our components' render methods to determine what gets rendered to our users. However, as our React applications grow in size and scope, we need an easier and more robust way of rendering different components. Additionally, we will want the ability to set information in the url parameters to make it easier for users to identify where they are in the application.
 
-React Router, while not the only, is the most commonly-used routing library for React. It is relatively straightforward to configure and integrates with the component architecture nicely (since it's just a collection of components). 
+React Router, while not the only, is the most commonly-used routing library for React. It is relatively straightforward to configure and integrates with the component architecture nicely (since it's just a collection of components).
 
 We will configure it as the root component in a React application. Then we'll tell it to render other components within itself depending on the path in the url. This way we don't have to reload the entire page to swap out some data.
 
@@ -61,6 +61,8 @@ Also, install the [React developer tools](https://chrome.google.com/webstore/det
 
 ## You Do: Examine Current Codebase (15 min / 0:30)
 
+Since we're starting off with a project that already has some scaffolding out, we should spend some time getting our bearings.
+
 Take 10 minutes and read through the code to familiarize yourself with the codebase with a partner or in groups of 3. Prepare to discuss your answers the following questions:
 
 <details>
@@ -86,11 +88,11 @@ First, we need to install `react-router` and `react-router-dom` as dependencies 
 npm install react-router react-router-dom
 ```
 
-To configure our current application to use React Router, we need to modify the root rendering of our app in `index.js`. We need to import  the `Router` component and place it as the root component of our application. `Router` will, in turn, render `App` through which all the rest of our components will be rendered:
+To configure our current application to use React Router, we need to modify the root rendering of our app in `index.js`. We need to import the `Router` component and place it as the root component of our application. `Router` will, in turn, render `App` through which all the rest of our components will be rendered:
 
 ```jsx
 // index.js
-import { BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom"
 
 //...
 
@@ -99,7 +101,7 @@ ReactDOM.render(
     <App />
   </Router>,
   document.getElementById("root")
-);
+)
 ```
 
 > Note that we are aliasing `BrowserRouter` as `Router` here for brevity.
@@ -121,7 +123,7 @@ Let's go ahead and import just route and link for now, we'll cover switch later.
 ```js
 // src/components/App/App.js
 
-import { Route, Link } from "react-router-dom";
+import { Route, Link } from "react-router-dom"
 ```
 
 Now that we have access to these components, we need to modify the `App` component's `render()` method to set up navigation. The basic structure we will use is...
@@ -165,7 +167,7 @@ render() {
         </Link>
       </nav>
       <main>
-        <Route path="/" 
+        <Route path="/"
           component={Home}
         />
       </main>
@@ -176,11 +178,12 @@ render() {
 
 Great! But this doesn't do anything because we're already on the homepage.
 
-Also, note that we used `component` in this case to display our home component. We're doing that because we just want to display it without any changes - we're not passing anything in, we're not modifying anything.
+Also, note that we used `component` in this case to display our home component. We're doing that because we just want to display it without any changes - we're not passing any props in, we're not modifying anything.
 
 ## You do: Add a Second Route and Link (10 min / 0:50)
 
 > 5 minute exercise / 5 minute review
+<<<<<<< HEAD
 * Using the above code as a guide, I want you to pseudocode on the board, with your group, what you think the next Link will look like for `/currencies` and the route that would match it.
 <details>
 <summary>Think About:</summary>
@@ -190,6 +193,10 @@ What will the code look like?
 <br>
 </details>
 <br>
+=======
+
+- Using the above instructions as a guide, add a new Link to `/currencies` and a route to match it. What component do you think you want to render?
+>>>>>>> 2460f2ea003edd5c9cfc8d4192c4cfe4704e7d20
 
 <details>
   <summary>Solution</summary>
@@ -212,10 +219,10 @@ render() {
         <Link to="/currencies">Currency List</Link>
       </nav>
       <main>
-        <Route path="/" 
+        <Route path="/"
           component={Home}
         />
-        <Route path="/currencies" 
+        <Route path="/currencies"
           component={() => <Currencies />}
         />
       </main>
@@ -223,8 +230,8 @@ render() {
   )
 }
 ```
-</details>
 
+</details>
 
 Now we've got two components and two routes. Perfect. Let's take a look at our currencies component and see what we need to do to make it work.
 
@@ -285,9 +292,7 @@ Firstly, we have to make sure we're using `render` instead of `component` in our
 
 ```jsx
 //...
-<Route path="/price/:currency" 
-  render={() => <Price />}
-/>
+<Route path="/price/:currency" render={() => <Price />} />
 //...
 ```
 
@@ -296,18 +301,18 @@ Now we need to add a couple things to `<Price />`
 We've got a function in this (`App.js`) component called setPrice. let's pass that in.
 
 ```jsx
-<Route 
-  path="/price/:currency" 
+<Route
+  path="/price/:currency"
   render={() => <Price setPrice={this.setPrice} />}
 />
 ```
 
-We also have to pass our URL parameter into `<Price />`. This is where the arrow function comes in to play.  
+We also have to pass our URL parameter into `<Price />`. This is where the arrow function comes in to play.
 
 ```jsx
-<Route 
-  path="/price/:currency" 
-  render={(routerProps) => <Price setPrice={this.setPrice} {...routerProps} />}
+<Route
+  path="/price/:currency"
+  render={routerProps => <Price setPrice={this.setPrice} {...routerProps} />}
 />
 ```
 
@@ -315,17 +320,75 @@ We also have to pass our URL parameter into `<Price />`. This is where the arrow
 
 Finally, we need to pass in the current component's state. We can also use the spread operator for that.
 
-
 ```jsx
-<Route 
-  path="/price/:currency" 
-  render={(routerProps) => <Price setPrice={this.setPrice} {...routerProps} {...this.state} />}
+<Route
+  path="/price/:currency"
+  render={routerProps => (
+    <Price setPrice={this.setPrice} {...routerProps} {...this.state} />
+  )}
 />
 ```
 
 ### Spread explained
 
 The `...` syntax looks funny, so let's step aside and show you something that might be more familiar.
+
+Open up quokka or your favorite interactive javascript environment and follow along.
+
+Let's start with two objects with a few properties in them.
+
+```js
+let shed = {
+  color: "red",
+  spiders: true,
+  contains: ["lawnmower", "dirt", "flashlight"]
+}
+
+let house = {
+  doors: 3,
+  garage: true
+}
+```
+
+Using the spread operator we can unpack the values in shed, and place all the values into another object.
+
+Let's rewrite this a bit.
+
+```js
+let shed = {
+  color: "red",
+  spiders: true,
+  contains: ["lawnmower", "dirt", "flashlight"]
+}
+
+let house = {
+  doors: 3,
+  garage: true,
+  ...shed
+}
+
+console.log(house)
+//​ ​​​​{
+//   doors: 3,​​​​​
+//   garage: true,​​​​​
+//​​ ​​​  color: 'red',​​​​​
+//​ ​​​​  spiders: true,​​​​​
+//​ ​​​​  contains: [ 'lawnmower', 'dirt', 'flashlight' ]
+// }​​​​​
+```
+
+We can do the same thing with arrays.
+
+```js
+let contains = ["lawnmower", "dirt", "flashlight"]
+
+let items = ["banana", ...contains]
+
+console.log(items)
+// ['banana', 'lawnmower', 'dirt', 'flashlight']
+```
+
+Now let's apply this to the router!
 
 We know what our state object looks like, so we can use that as an example.
 
@@ -337,6 +400,7 @@ this.state = {
 
 There are other aspects of props and state that we want to pass to the Price component, if we passed everything we need it would look like this.
 
+<<<<<<< HEAD
 
 Instead of doing this:
 
@@ -348,15 +412,58 @@ Instead of doing this:
   match={}
   price={this.state.price}
 />
+=======
+```js
+<Price price={this.state.price} />
+```
+
+If we use the react dev tools, we can see what props have been passed down from the `routerProps` object.
+
+```js
+let routerProps = {
+  history: {
+    /* stuff in here */
+  },
+  location: {
+    /* stuff in here */
+  },
+  match: {
+    /* stuff in here */
+  }
+}
+```
+
+So if we spread the routerProps object, we'll get something like this:
+
+```js
+<Price
+  history={ /* stuff in here */ }
+  location={ /* stuff in here */ }
+  match={ /* stuff in here */ }
+>
+```
+
+Putting it all together, we turn this:
+
+```jsx
+<Price setPrice={this.setPrice} {...routerProps} {...this.state} />
+>>>>>>> 2460f2ea003edd5c9cfc8d4192c4cfe4704e7d20
 ```
 
 We do this, it is just a way of simplifying code and including key-value pairs as a group rather than specifically say them:
 
 ```jsx
-<Price 
+<Price
   setPrice={this.setPrice}
+<<<<<<< HEAD
   {...routerProps}
   {...this.state} 
+=======
+  history={ /* stuff in here */ }
+  location={ /* stuff in here */ }
+  match={ /* stuff in here */ }
+  price={this.state.price}
+>>>>>>> 2460f2ea003edd5c9cfc8d4192c4cfe4704e7d20
 />
 ```
 
@@ -366,7 +473,7 @@ We still have some weird display quirks, and for that, we'll use `<Switch>` to f
 
 ## Using Switch (10 min / 1:50)
 
-Switch works just like the switch/case statements in javascript. We're comparing string values (in this case, routes) and executing conditions (rendering components) based on what matches turn out true. 
+Switch works just like the switch/case statements in javascript. We're comparing string values (in this case, routes) and executing conditions (rendering components) based on what matches turn out true.
 
 Since we're not using switch right now, we'll see something like this:
 
@@ -381,14 +488,14 @@ There are two ways to handle this: using the Switch component, or specifying `ex
 Let's look at our routes in `App.js` again:
 
 ```jsx
-<Route path="/" 
+<Route path="/"
   component={Home}
 />
-<Route path="/currencies" 
+<Route path="/currencies"
   component={Currencies}
 />
-<Route 
-  path="/price/:currency" 
+<Route
+  path="/price/:currency"
   render={(routerProps) => <Price setPrice={this.setPrice} {...routerProps} {...this.state} /> }
 />
 ```
@@ -396,22 +503,19 @@ Let's look at our routes in `App.js` again:
 Try putting `exact` on the `/` path route component.
 
 ```js
-<Route path="/" 
-  exact
-  component={Home}
-/>
+<Route path="/" exact component={Home} />
 ```
 
-> Note: this is equivalent to putting `exact={true}`
+> Note: this is equivalent to putting `exact=true`
 
-Beautiful! this is a great solution, unless we have  many different routes.
+Beautiful! this is a great solution, unless we have many different routes.
 
 If we had a list of routes like:
 
-* `/currencies`
-* `/currencies/new`
-* `/currencies/:id`
- etc
+- `/currencies`
+- `/currencies/new`
+- `/currencies/:id`
+  etc
 
 we would have to put `exact` on `/currencies` or else, any time we went to `/currencies/something` it would match both the root (`/currencies`) AND the `/currencies/something` routes and both would be rendered.
 
@@ -420,7 +524,7 @@ We can avoid all this by just using `<Switch />`.
 Back in `App.js`, let's import the `<Switch />` component and then wrap all of our routes in it.
 
 ```jsx
-import { Route, Link, Switch } from 'react-router-dom' 
+import { Route, Link, Switch } from 'react-router-dom'
 
 render() {
   return(
@@ -434,14 +538,14 @@ render() {
       </nav>
       <main>
         <Switch>
-          <Route path="/" 
+          <Route path="/"
             component={Home}
           />
-          <Route path="/currencies" 
+          <Route path="/currencies"
             component={Currencies}
           />
-          <Route 
-            path="/price/:currency" 
+          <Route
+            path="/price/:currency"
             render={(routerProps) => <Price setPrice={this.setPrice} {...routerProps} {...this.state} /> }
           />
         </Switch>
@@ -468,12 +572,12 @@ Start a new app using create-react-app. Call it user-router or something like th
 
 Build 4 components (not including the root App.js). Each one will render something different:
 
-| Component | Renders | Route | 
-|--|--|--|
-| Home | "This is the homepage" | / |
-| Greet | A greeting from a url parameter passed in | /greet/:param | 
-| Users | A list of users | /users/ | 
-| NewUser | A form that lets you add a username | /users/new |
+| Component | Renders                                   | Route         |
+| --------- | ----------------------------------------- | ------------- |
+| Home      | "This is the homepage"                    | /             |
+| Greet     | A greeting from a url parameter passed in | /greet/:param |
+| Users     | A list of users                           | /users/       |
+| NewUser   | A form that lets you add a username       | /users/new    |
 
 Set up react-router like we did in this lesson, at the top level.
 
@@ -481,7 +585,7 @@ Build out the components with placeholders to render stuff before starting to ad
 
 Set up your routes so that each route only displays the appropriate component.
 
-Plan out where you think your state should live. If you have to share state between multiple components, what's the best place to keep it? 
+Plan out where you think your state should live. If you have to share state between multiple components, what's the best place to keep it?
 
 Think about what your state needs to contain.
 
