@@ -156,6 +156,8 @@ render() {
   What is the 'to' in the '<Link to=""></Link>'?
   What is the 'Route' component for ?
 </details>
+
+
 > **Link** - a component for setting the URL and providing navigation between different components in our app without triggering a page refresh. It takes a `to` property, which sets the URL to whatever path is defined within it. Link can also be used inside of any component that is connected to a `Route`.
 
 > **Route** - a component that renders a specified component (using either `render` or `component`) based on the current url (`path`) we're at. `path` should probably match a `<Link to="">` defined somewhere.
