@@ -153,9 +153,11 @@ render() {
 <details>
   <summary>Check For Understanding</summary>
   What is the 'Link' component for ?</br>
-  What is the 'to' in the 'Link to=""' for ?</br>
-  What is the 'Route' component for ?
+  What is the 'to' in the '  Link to=""  ' for ?</br>
+  What is the 'Route' component for ? </br></br>
 </details>
+
+
 
 
 > **Link** - a component for setting the URL and providing navigation between different components in our app without triggering a page refresh. It takes a `to` property, which sets the URL to whatever path is defined within it. Link can also be used inside of any component that is connected to a `Route`.
